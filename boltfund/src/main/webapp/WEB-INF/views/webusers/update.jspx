@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pg_tm470_boltfund_domain_WebUser" modelAttribute="webUser" path="/webusers" versionField="Version" z="daEVuAvuTf3ORbFOSTPR+T+MYEA=">
+        <field:input field="name" id="c_pg_tm470_boltfund_domain_WebUser_name" max="30" z="fok+ThpJL1zU4x6HrFMkWFUYQPo="/>
+        <field:input field="surname" id="c_pg_tm470_boltfund_domain_WebUser_surname" max="30" z="thMYzjuQ3iaa1K27jO4+gRX6RGs="/>
+        <field:textarea field="email" id="c_pg_tm470_boltfund_domain_WebUser_email" validationMessageCode="field_invalid_email" z="iANP/yQOT7wacliUEwXNP1kSi+k="/>
+        <field:input field="phone" id="c_pg_tm470_boltfund_domain_WebUser_phone" max="25" z="gikqkNHPZHxQst3TjeVmB1R9F54="/>
+        <field:input field="mobile" id="c_pg_tm470_boltfund_domain_WebUser_mobile" max="25" z="u55zDcaYBckUvvHnHk3Z2QBaW2M="/>
+        <field:input field="fax" id="c_pg_tm470_boltfund_domain_WebUser_fax" max="25" z="EOYktvmoVk54THGHKbBpbvjz4rE="/>
+        <field:input field="username" id="c_pg_tm470_boltfund_domain_WebUser_username" max="30" required="true" z="EWeAKe1DZ/VnHWqWeIRsVemShCg="/>
+        <field:input field="password" id="c_pg_tm470_boltfund_domain_WebUser_password" max="30" required="true" z="SHXCF2WQb1c+sbSXxA15D4Hmjmg="/>
+        <field:select field="roles" id="c_pg_tm470_boltfund_domain_WebUser_roles" items="${approles}" path="approles" z="SH7HnZNPK28pTu+TflpZP9aaXcE="/>
+    </form:update>
+</div>

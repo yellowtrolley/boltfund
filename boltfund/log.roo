@@ -1,0 +1,478 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-27 13:14:33
+/*
+project --topLevelPackage pg.TM470.boltfund --projectName boltfund --java 6 --packaging WAR
+jpa setup --provider HIBERNATE --database MYSQL
+database properties set --key database.password --value bolters
+database properties set --key database.username --value bolters
+database properties set --key database.url --value jdbc:mysql://localhost:3306/bolters
+enum type --class ~.domain.AppRole
+enum constant --name ADMIN
+enum constant --name BOLTER
+enum constant --name CLIMBER
+entity jpa --class ~.domain.AbstractUser --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName surname --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName username --notNull --sizeMax 30
+field string --fieldName password --notNull --sizeMax 30
+field set --fieldName roles --type ~.domain.AppRole
+entity jpa --class ~.domain.WebUser --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Bolter --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Style --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Rating --testAutomatically
+field string --fieldName name --sizeMax 20
+field number --fieldName score --type java.lang.Double
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Grade --testAutomatically 
+field string --fieldName yds --sizeMax 5
+field string --fieldName britishTec --sizeMax 5
+field string --fieldName britishAdj --sizeMax 5
+field string --fieldName french --sizeMax 5
+field string --fieldName uiaa --sizeMax 5
+field string --fieldName saxon --sizeMax 5
+field string --fieldName ewbank --sizeMax 5
+field string --fieldName finnish --sizeMax 5
+field string --fieldName norwegian --sizeMax 5
+field string --fieldName brazilian --sizeMax 5
+entity jpa --class ~.domain.Location
+field string --fieldName address --sizeMax 150 
+field number --fieldName latitude --type java.lang.Float
+field number --fieldName longitude --type java.lang.Float
+entity jpa --class ~.domain.Season --testAutomatically
+field string --fieldName name --sizeMax 6
+entity jpa --class ~.domain.PriceRange --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName priceRange --sizeMax 30
+entity jpa --class ~.domain.PrintedGuide --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName link --sizeMax 100
+entity jpa --class ~.domain.Infos --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName contact --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName access --sizeMax 5000
+field string --fieldName note --sizeMax 1000
+field string --fieldName link --sizeMax 100
+field reference --fieldName location --type ~.domain.Location
+entity jpa --class ~.domain.Sleep --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Eat --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Shop --extends ~.domain.Infos --testAutomatically
+entity jpa --class ~.domain.Crag --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field string --fieldName rockType --sizeMax 20
+field number --fieldName height --type java.lang.Integer
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName location --type ~.domain.Location
+field set --fieldName season --type ~.domain.Season
+field set --fieldName guides --type ~.domain.PrintedGuide
+field set --fieldName infos --type ~.domain.Infos
+entity jpa --class ~.domain.Sector --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+entity jpa --class ~.domain.Route --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName note --sizeMax 1000
+field number --fieldName length --type java.lang.Integer
+field number --fieldName bolts --type java.lang.Integer
+field date --fieldName dateCreated --type java.util.Date --notNull --past
+field date --fieldName dateSubmitted --type java.util.Date --notNull --value "#{new java.util.Date()}"
+field date --fieldName dateRebolted --type java.util.Date --past
+field reference --fieldName rating --type ~.domain.Rating
+field set --fieldName style --type ~.domain.Style
+field set --fieldName grade --type ~.domain.Grade
+field set --class ~.domain.Crag --fieldName sectors --type ~.domain.Sector --cardinality ONE_TO_MANY --mappedBy crag
+field reference --class ~.domain.Sector --fieldName crag --type ~.domain.Crag --cardinality MANY_TO_ONE
+field set --class ~.domain.Sector --fieldName routes --type ~.domain.Route --cardinality ONE_TO_MANY --mappedBy sector
+field reference --class ~.domain.Route --fieldName sector --type ~.domain.Sector --cardinality MANY_TO_ONE
+field set --class ~.domain.Bolter --fieldName routesBolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName boltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesBolted 
+field set --class ~.domain.Bolter --fieldName routesRebolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName reboltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesRebolted
+json all --deepSerialize
+web mvc json setup
+web mvc json all --package ~.web
+web mvc setup
+web mvc all --package ~.web
+// script boltfund.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-07-27 13:15:06
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-27 13:19:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-27 15:15:05
+entity jpa --class ~.domain.Crag --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field string --fieldName rockType --sizeMax 20
+field number --fieldName height --type java.lang.Integer
+field reference --fieldName rating --type ~.domain.Rating 
+field set --fieldName sectors --type ~.domain.Sector
+field set --fieldName season --type ~.domain.Season
+field set --fieldName guides --type ~.domain.PrintedGuide
+field set --fieldName infos --type ~.domain.Infos
+entity jpa --class ~.domain.Sector --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field reference --fieldName rating --type ~.domain.Rating
+field set --fieldName routes --type ~.domain.Route
+entity jpa --class ~.domain.Route --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName note --sizeMax 1000
+field number --fieldName length --type java.lang.Integer
+field number --fieldName bolts --type java.lang.Integer
+field date --fieldName dateCreated --type java.util.Date --notNull --past
+field date --fieldName dateSubmitted --type java.util.Date --notNull --value "#{new java.util.Date()}"
+field date --fieldName dateRebolted --type java.util.Date --past
+field reference --fieldName rating --type ~.domain.Rating
+field set --fieldName style --type ~.domain.Style
+field set --fieldName grade --type ~.domain.Grade
+// script tmp.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-07-27 15:15:39
+json all --deepSerialize 
+web mvc json all --package ~.web
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-27 16:52:23
+enum type --class ~.domain.AppRole
+enum constant --name ADMIN
+enum constant --name BOLTER
+enum constant --name CLIMBER
+entity jpa --class ~.domain.AbstractUser --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName surname --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName username --notNull --sizeMax 30
+field string --fieldName password --notNull --sizeMax 30
+field set --fieldName roles --type ~.domain.AppRole
+entity jpa --class ~.domain.WebUser --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Bolter --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Style --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Rating --testAutomatically
+field string --fieldName name --sizeMax 20
+field number --fieldName score --type java.lang.Double
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Grade --testAutomatically 
+field string --fieldName yds --sizeMax 5
+field string --fieldName britishTec --sizeMax 5
+field string --fieldName britishAdj --sizeMax 5
+field string --fieldName french --sizeMax 5
+field string --fieldName uiaa --sizeMax 5
+field string --fieldName saxon --sizeMax 5
+field string --fieldName ewbank --sizeMax 5
+field string --fieldName finnish --sizeMax 5
+field string --fieldName norwegian --sizeMax 5
+field string --fieldName brazilian --sizeMax 5
+entity jpa --class ~.domain.Season --testAutomatically
+field string --fieldName name --sizeMax 6
+entity jpa --class ~.domain.PriceRange --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName priceRange --sizeMax 30
+entity jpa --class ~.domain.PrintedGuide --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName link --sizeMax 100
+entity jpa --class ~.domain.Infos --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName contact --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName access --sizeMax 5000
+field string --fieldName note --sizeMax 1000
+field string --fieldName link --sizeMax 100
+entity jpa --class ~.domain.Sleep --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Eat --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Shop --extends ~.domain.Infos --testAutomatically
+entity jpa --class ~.domain.Crag --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field string --fieldName rockType --sizeMax 20
+field number --fieldName height --type java.lang.Integer
+field reference --fieldName rating --type ~.domain.Rating 
+field set --fieldName season --type ~.domain.Season
+field set --fieldName guides --type ~.domain.PrintedGuide
+field set --fieldName infos --type ~.domain.Infos
+entity jpa --class ~.domain.Sector --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field reference --fieldName rating --type ~.domain.Rating
+entity jpa --class ~.domain.Route --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName note --sizeMax 1000
+field number --fieldName length --type java.lang.Integer
+field number --fieldName bolts --type java.lang.Integer
+field date --fieldName dateCreated --type java.util.Date --notNull --past
+field date --fieldName dateSubmitted --type java.util.Date --notNull --value "#{new java.util.Date()}"
+field date --fieldName dateRebolted --type java.util.Date --past
+field reference --fieldName rating --type ~.domain.Rating
+field set --fieldName style --type ~.domain.Style
+field set --fieldName grade --type ~.domain.Grade
+field set --class ~.domain.Crag --fieldName sectors --type ~.domain.Sector --cardinality ONE_TO_MANY --mappedBy crag
+field reference --class ~.domain.Sector --fieldName crag --type ~.domain.Crag --cardinality MANY_TO_ONE
+field set --class ~.domain.Sector --fieldName routes --type ~.domain.Route --cardinality ONE_TO_MANY --mappedBy sector
+field reference --class ~.domain.Route --fieldName sector --type ~.domain.Sector --cardinality MANY_TO_ONE
+field set --class ~.domain.Bolter --fieldName routesBolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName boltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesBolted 
+field set --class ~.domain.Bolter --fieldName routesRebolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName reboltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesRebolted
+json all --deepSerialize
+// [failed] script tmp.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-07-27 16:53:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-27 16:53:55
+enum type --class ~.domain.AppRole
+enum constant --name ADMIN
+enum constant --name BOLTER
+enum constant --name CLIMBER
+entity jpa --class ~.domain.AbstractUser --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName surname --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName username --notNull --sizeMax 30
+field string --fieldName password --notNull --sizeMax 30
+field set --fieldName roles --type ~.domain.AppRole
+entity jpa --class ~.domain.WebUser --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Bolter --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Style --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Rating --testAutomatically
+field string --fieldName name --sizeMax 20
+field number --fieldName score --type java.lang.Double
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Grade --testAutomatically 
+field string --fieldName yds --sizeMax 5
+field string --fieldName britishTec --sizeMax 5
+field string --fieldName britishAdj --sizeMax 5
+field string --fieldName french --sizeMax 5
+field string --fieldName uiaa --sizeMax 5
+field string --fieldName saxon --sizeMax 5
+field string --fieldName ewbank --sizeMax 5
+field string --fieldName finnish --sizeMax 5
+field string --fieldName norwegian --sizeMax 5
+field string --fieldName brazilian --sizeMax 5
+entity jpa --class ~.domain.Season --testAutomatically
+field string --fieldName name --sizeMax 6
+entity jpa --class ~.domain.PriceRange --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName priceRange --sizeMax 30
+entity jpa --class ~.domain.PrintedGuide --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName link --sizeMax 100
+entity jpa --class ~.domain.Infos --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName contact --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName access --sizeMax 5000
+field string --fieldName note --sizeMax 1000
+field string --fieldName link --sizeMax 100
+entity jpa --class ~.domain.Sleep --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Eat --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Shop --extends ~.domain.Infos --testAutomatically
+entity jpa --class ~.domain.Crag --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field string --fieldName rockType --sizeMax 20
+field number --fieldName height --type java.lang.Integer
+field reference --fieldName rating --type ~.domain.Rating 
+field set --fieldName season --type ~.domain.Season
+field set --fieldName guides --type ~.domain.PrintedGuide
+field set --fieldName infos --type ~.domain.Infos
+entity jpa --class ~.domain.Sector --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field reference --fieldName rating --type ~.domain.Rating
+entity jpa --class ~.domain.Route --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName note --sizeMax 1000
+field number --fieldName length --type java.lang.Integer
+field number --fieldName bolts --type java.lang.Integer
+field date --fieldName dateCreated --type java.util.Date --notNull --past
+field date --fieldName dateSubmitted --type java.util.Date --notNull --value "#{new java.util.Date()}"
+field date --fieldName dateRebolted --type java.util.Date --past
+field reference --fieldName rating --type ~.domain.Rating
+field set --fieldName style --type ~.domain.Style
+field set --fieldName grade --type ~.domain.Grade
+field set --class ~.domain.Crag --fieldName sectors --type ~.domain.Sector --cardinality ONE_TO_MANY --mappedBy crag
+field reference --class ~.domain.Sector --fieldName crag --type ~.domain.Crag --cardinality MANY_TO_ONE
+field set --class ~.domain.Sector --fieldName routes --type ~.domain.Route --cardinality ONE_TO_MANY --mappedBy sector
+field reference --class ~.domain.Route --fieldName sector --type ~.domain.Sector --cardinality MANY_TO_ONE
+field set --class ~.domain.Bolter --fieldName routesBolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName boltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesBolted 
+field set --class ~.domain.Bolter --fieldName routesRebolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName reboltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesRebolted
+json all --deepSerialize
+// [failed] script tmp.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-07-27 16:54:51
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-07-27 16:54:53
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-07-27 16:55:36
+enum type --class ~.domain.AppRole
+enum constant --name ADMIN
+enum constant --name BOLTER
+enum constant --name CLIMBER
+entity jpa --class ~.domain.AbstractUser --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName surname --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName username --notNull --sizeMax 30
+field string --fieldName password --notNull --sizeMax 30
+field set --fieldName roles --type ~.domain.AppRole
+entity jpa --class ~.domain.WebUser --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Bolter --extends ~.domain.AbstractUser --testAutomatically
+entity jpa --class ~.domain.Style --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Rating --testAutomatically
+field string --fieldName name --sizeMax 20
+field number --fieldName score --type java.lang.Double
+field string --fieldName description --sizeMax 60
+entity jpa --class ~.domain.Grade --testAutomatically 
+field string --fieldName yds --sizeMax 5
+field string --fieldName britishTec --sizeMax 5
+field string --fieldName britishAdj --sizeMax 5
+field string --fieldName french --sizeMax 5
+field string --fieldName uiaa --sizeMax 5
+field string --fieldName saxon --sizeMax 5
+field string --fieldName ewbank --sizeMax 5
+field string --fieldName finnish --sizeMax 5
+field string --fieldName norwegian --sizeMax 5
+field string --fieldName brazilian --sizeMax 5
+entity jpa --class ~.domain.Season --testAutomatically
+field string --fieldName name --sizeMax 6
+entity jpa --class ~.domain.PriceRange --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName priceRange --sizeMax 30
+entity jpa --class ~.domain.PrintedGuide --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName link --sizeMax 100
+entity jpa --class ~.domain.Infos --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName contact --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName access --sizeMax 5000
+field string --fieldName note --sizeMax 1000
+field string --fieldName link --sizeMax 100
+entity jpa --class ~.domain.Sleep --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Eat --extends ~.domain.Infos --testAutomatically
+field reference --fieldName rating --type ~.domain.Rating
+field reference --fieldName priceRange --type ~.domain.PriceRange
+entity jpa --class ~.domain.Shop --extends ~.domain.Infos --testAutomatically
+entity jpa --class ~.domain.Crag --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field string --fieldName rockType --sizeMax 20
+field number --fieldName height --type java.lang.Integer
+field reference --fieldName rating --type ~.domain.Rating 
+field set --fieldName season --type ~.domain.Season
+field set --fieldName guides --type ~.domain.PrintedGuide
+field set --fieldName infos --type ~.domain.Infos
+entity jpa --class ~.domain.Sector --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field reference --fieldName rating --type ~.domain.Rating
+entity jpa --class ~.domain.Route --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName note --sizeMax 1000
+field number --fieldName length --type java.lang.Integer
+field number --fieldName bolts --type java.lang.Integer
+field date --fieldName dateCreated --type java.util.Date --notNull --past
+field date --fieldName dateSubmitted --type java.util.Date --notNull --value "#{new java.util.Date()}"
+field date --fieldName dateRebolted --type java.util.Date --past
+field reference --fieldName rating --type ~.domain.Rating
+field set --fieldName style --type ~.domain.Style
+field set --fieldName grade --type ~.domain.Grade
+field set --class ~.domain.Crag --fieldName sectors --type ~.domain.Sector --cardinality ONE_TO_MANY --mappedBy crag
+field reference --class ~.domain.Sector --fieldName crag --type ~.domain.Crag --cardinality MANY_TO_ONE
+field set --class ~.domain.Sector --fieldName routes --type ~.domain.Route --cardinality ONE_TO_MANY --mappedBy sector
+field reference --class ~.domain.Route --fieldName sector --type ~.domain.Sector --cardinality MANY_TO_ONE
+field set --class ~.domain.Bolter --fieldName routesBolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName boltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesBolted 
+field set --class ~.domain.Bolter --fieldName routesRebolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName reboltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesRebolted
+json all --deepSerialize
+web mvc json all --package ~.web
+// script tmp.roo
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-29 12:10:57
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-08-29 12:22:28
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-29 12:22:47
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-08-29 16:15:17
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-29 16:58:47
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-08-29 18:18:16
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-08-29 18:35:10
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-14 01:26:16
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-14 15:09:40
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-09-14 17:51:40
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-10 15:16:16
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-10 15:16:52
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2013-11-18 21:38:27

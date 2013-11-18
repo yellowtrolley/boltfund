@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_Style" items="${styles}" z="fc5fZkua8pS7RSdKCoRRJsWXK0M=">
+        <table:table data="${styles}" id="l_pg_tm470_boltfund_domain_Style" path="/styles" z="CCaVUPCJgPpPQjErydMS/06z9Oc=">
+            <table:column id="c_pg_tm470_boltfund_domain_Style_name" property="name" z="cfOrF5KN5n5267ie08TwDdM5mYg="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Style_description" property="description" z="87vUQVcupoEauxJ6QJ5PReGTE7M="/>
+        </table:table>
+    </page:list>
+</div>

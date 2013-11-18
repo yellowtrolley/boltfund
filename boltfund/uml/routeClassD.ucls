@@ -1,0 +1,183 @@
+<class-diagram version="1.0.10" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Crag" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Crag.java" binary="false">    
+    <position height="-1" width="-1" x="444" y="94"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Route" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Route.java" binary="false">    
+    <position height="-1" width="-1" x="448" y="636"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Sector" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Sector.java" binary="false">    
+    <position height="-1" width="-1" x="450" y="375"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Bolter" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Bolter.java" binary="false">    
+    <position height="113" width="98" x="109" y="791"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Style" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Style.java" binary="false">    
+    <position height="-1" width="-1" x="422" y="828"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Grade" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Grade.java" binary="false">    
+    <position height="-1" width="-1" x="571" y="896"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Rating" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Rating.java" binary="false">    
+    <position height="-1" width="-1" x="719" y="836"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="8">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="9" name="crag"/>      
+      <multiplicity id="10" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="11">    
+    <bendpoint x="269" y="891"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="12" name="boltedBy"/>      
+      <multiplicity id="13" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="14">    
+    <bendpoint x="267" y="334"/>    
+    <bendpoint x="182" y="526"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="15" name="editors"/>      
+      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="17">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="18" name="sector"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <bendpoint x="283" y="807"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="21" name="reboltedBy"/>      
+      <multiplicity id="22" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <bendpoint x="631" y="334"/>    
+    <bendpoint x="631" y="526"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="24" name="rating"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <bendpoint x="236" y="710"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="27" name="routesRebolted"/>      
+      <multiplicity id="28" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="30" name="style"/>      
+      <multiplicity id="31" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="33" name="grade"/>      
+      <multiplicity id="34" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="36" name="rating"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="39" name="sectors"/>      
+      <multiplicity id="40" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="42" name="routes"/>      
+      <multiplicity id="43" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="45" name="routesBolted"/>      
+      <multiplicity id="46" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+    visibility="false">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

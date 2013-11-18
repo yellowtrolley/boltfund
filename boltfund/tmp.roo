@@ -1,0 +1,158 @@
+// Create domain entities
+enum type --class ~.domain.AppRole
+enum constant --name ADMIN
+enum constant --name BOLTER
+enum constant --name CLIMBER
+
+entity jpa --class ~.domain.AbstractUser --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName surname --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName username --notNull --sizeMax 30
+field string --fieldName password --notNull --sizeMax 30
+field set --fieldName roles --type ~.domain.AppRole
+
+entity jpa --class ~.domain.WebUser --extends ~.domain.AbstractUser --testAutomatically
+
+entity jpa --class ~.domain.Bolter --extends ~.domain.AbstractUser --testAutomatically
+
+entity jpa --class ~.domain.Style --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 60
+
+entity jpa --class ~.domain.Ranking --testAutomatically
+field string --fieldName name --sizeMax 20
+field number --fieldName score --type java.lang.Double
+field string --fieldName description --sizeMax 60
+
+entity jpa --class ~.domain.Grade --testAutomatically 
+field string --fieldName yds --sizeMax 5
+field string --fieldName britishTec --sizeMax 5
+field string --fieldName britishAdj --sizeMax 5
+field string --fieldName french --sizeMax 5
+field string --fieldName uiaa --sizeMax 5
+field string --fieldName saxon --sizeMax 5
+field string --fieldName ewbank --sizeMax 5
+field string --fieldName finnish --sizeMax 5
+field string --fieldName norwegian --sizeMax 5
+field string --fieldName brazilian --sizeMax 5
+
+entity jpa --class ~.domain.Season --testAutomatically
+field string --fieldName name --sizeMax 6
+
+entity jpa --class ~.domain.PriceRange --testAutomatically
+field string --fieldName name --sizeMax 20
+field string --fieldName priceRange --sizeMax 30
+
+entity jpa --class ~.domain.PrintedGuide --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName link --sizeMax 100
+
+entity jpa --class ~.domain.Infos --abstract --inheritanceType TABLE_PER_CLASS
+field string --fieldName name --sizeMax 30
+field string --fieldName contact --sizeMax 30
+field string --fieldName email --sizeMax 50
+field string --fieldName phone --sizeMax 25
+field string --fieldName mobile --sizeMax 25
+field string --fieldName fax --sizeMax 25
+field string --fieldName access --sizeMax 5000
+field string --fieldName note --sizeMax 1000
+field string --fieldName link --sizeMax 100
+
+entity jpa --class ~.domain.Sleep --extends ~.domain.Infos --testAutomatically
+field reference --fieldName ranking --type ~.domain.Ranking
+field reference --fieldName priceRange --type ~.domain.PriceRange
+
+entity jpa --class ~.domain.Eat --extends ~.domain.Infos --testAutomatically
+field reference --fieldName ranking --type ~.domain.Ranking
+field reference --fieldName priceRange --type ~.domain.PriceRange
+
+entity jpa --class ~.domain.Shop --extends ~.domain.Infos --testAutomatically
+
+
+entity jpa --class ~.domain.Crag --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field string --fieldName rockType --sizeMax 20
+field number --fieldName height --type java.lang.Integer
+field reference --fieldName ranking --type ~.domain.Ranking 
+// field set --fieldName sectors --type ~.domain.Sector
+field set --fieldName season --type ~.domain.Season
+field set --fieldName guides --type ~.domain.PrintedGuide
+field set --fieldName infos --type ~.domain.Infos
+
+entity jpa --class ~.domain.Sector --testAutomatically 
+field string --fieldName name --sizeMax 20
+field string --fieldName description --sizeMax 5000
+field string --fieldName notes --sizeMax 2000
+field string --fieldName access --sizeMax 5000
+field reference --fieldName ranking --type ~.domain.Ranking
+// field set --fieldName routes --type ~.domain.Route
+
+entity jpa --class ~.domain.Route --testAutomatically
+field string --fieldName name --sizeMax 25
+field string --fieldName description --sizeMax 2000
+field string --fieldName note --sizeMax 1000
+field number --fieldName length --type java.lang.Integer
+field number --fieldName bolts --type java.lang.Integer
+field date --fieldName dateCreated --type java.util.Date --notNull --past
+field date --fieldName dateSubmitted --type java.util.Date --notNull --value "#{new java.util.Date()}"
+field date --fieldName dateRebolted --type java.util.Date --past
+field reference --fieldName ranking --type ~.domain.Ranking
+field set --fieldName style --type ~.domain.Style
+field set --fieldName grade --type ~.domain.Grade
+
+
+// Relationships between entities
+// 1-n from Crag to Sector 
+field set --class ~.domain.Crag --fieldName sectors --type ~.domain.Sector --cardinality ONE_TO_MANY --mappedBy crag
+
+// n-1 from Sector to Crag
+field reference --class ~.domain.Sector --fieldName crag --type ~.domain.Crag --cardinality MANY_TO_ONE
+// 1-n from Sector to Route
+field set --class ~.domain.Sector --fieldName routes --type ~.domain.Route --cardinality ONE_TO_MANY --mappedBy sector
+
+// n-1 from Route to Sector
+field reference --class ~.domain.Route --fieldName sector --type ~.domain.Sector --cardinality MANY_TO_ONE
+
+
+// many-to-many Bolter - Route boltedBy
+field set --class ~.domain.Bolter --fieldName routesBolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName boltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesBolted 
+
+// many-to-many Bolter - Route reboltedBy
+field set --class ~.domain.Bolter --fieldName routesRebolted --type ~.domain.Route --cardinality MANY_TO_MANY
+field set --class ~.domain.Route --fieldName reboltedBy --type ~.domain.Bolter --cardinality MANY_TO_MANY --mappedBy routesRebolted
+
+
+
+// many-to-many Season - Crag
+//field set --class ~.domain.Season --fieldName crags --type ~.domain.Crag --cardinality MANY_TO_MANY
+//field set --class ~.domain.Crag --fieldName seasons --type ~.domain.Season --cardinality MANY_TO_MANY --mappedBy crags
+
+// many-to-many Style - Route 
+//field set --class ~.domain.Style --fieldName routes --type ~.domain.Route --cardinality MANY_TO_MANY
+//field set --class ~.domain.Route --fieldName styles --type ~.domain.Style --cardinality MANY_TO_MANY --mappedBy routes
+
+// one-to-many from Grade to Route
+//field set --class ~.domain.Grade --fieldName routes --type ~.domain.Route --cardinality ONE_TO_MANY --mappedBy grade
+// many-to-one from  Route to Grade 
+//field reference --class ~.domain.Route --fieldName grade --type ~.domain.Grade --cardinality MANY_TO_ONE
+
+
+// Define a repository layer for persistence
+// repository jpa --interface ~.repository.CragRepository --entity ~.domain.Crag
+// Define a service/facade layer
+// service --interface ~.service.CragService --entity ~.domain.Crag
+
+
+// Offer JSON remoting for all domain types through Spring MVC
+json all --deepSerialize
+web mvc json all --package ~.web
+

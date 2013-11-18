@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_Route" items="${routes}" z="NmcXaEY2XRyWydBOTrYO7dwxLyQ=">
+        <table:table data="${routes}" id="l_pg_tm470_boltfund_domain_Route" path="/routes" z="oaLEdLOA+uxboMepKfeg66g3CLQ=">
+            <table:column id="c_pg_tm470_boltfund_domain_Route_name" property="name" z="k1QgDr/VmPhMVw32rih+ESINsJ0="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Route_description" property="description" z="IZesygkvCynsWdIgCooLrHaWs20="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Route_note" property="note" z="5hDV8RwQ3SURUU+cqg5LXLalWoQ="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Route_length" property="length" z="JG/gmihV5j1A3Kf6BkGcZtnuB5g="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Route_bolts" property="bolts" z="h4U7wsLRVZD+LdnEX5nfOGsRlx8="/>
+            <table:column date="true" dateTimePattern="${route_datecreated_date_format}" id="c_pg_tm470_boltfund_domain_Route_dateCreated" property="dateCreated" z="UZtHaLW7Q9sL7WzCgVCylkeQ2Xg="/>
+        </table:table>
+    </page:list>
+</div>

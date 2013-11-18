@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+
+	<spring:url value="/crags" var="show_form_url" />
+	<c:set var="fnRowCallback">
+		<![CDATA[ 
+
+		function( nRow, aData, iDisplayIndex ) {
+		            //console.log(aData);
+		            if(${update}) {
+	       				$(nRow).append($('<td>')
+			       				.html($('<a>',{
+									title: 'update_label',
+									href: '${update_form_url}/'+aData.${typeIdFieldName}+'?form'
+								}).append('<img alt="update_label" class="image" src="${update_image_url}" title="update_label" />')
+						));
+		            }
+       				
+       				$(nRow).live('click',function () {
+       					
+		            	
+		            		var nTr = nRow;
+					var oTable = o${id};
+	       				  	var i = $.inArray( nTr, anOpen );
+	       				   
+		       				if ( i === -1 ) {
+		       				   //  $('img', this).attr( 'src', '${delete_image_url}' );
+		       				    var nDetailsRow = oTable.fnOpen( nTr, 	
+										function() {
+			  								var oData = oTable.fnGetData( nTr );
+			  								var id = oData.id;
+			  								window.location = '${show_form_url}/'+id;
+			  								return false;
+										},
+							 			'details' );
+		       				    $('div.innerDetails', nDetailsRow).slideDown();
+		       				    anOpen.push( nTr );
+		       				}
+		       				else {
+		       				   // $('img', this).attr( 'src', '${show_image_url}' );
+		       				    $('div.innerDetails', $(nTr).next()[0]).slideUp( function () {
+		       				    	oTable.fnClose( nTr );
+		       				      anOpen.splice( i, 1 );
+		       				    } );
+		       				}
+		       				
+		            	
+       					
+       					
+       			        var id = this.id;
+       			        var index = jQuery.inArray(id, aSelected);
+       			         
+       			        if ( index === -1 ) {
+       			            aSelected.push( id );
+       			        } else {
+       			            aSelected.splice( index, 1 );
+       			        }
+       			         
+       			        $(this).toggleClass('row_selected');
+       			    } );
+       		        
+
+
+		            //$('td').appendTo($(nRow));
+		            if ( jQuery.inArray(aData.DT_RowId, aSelected) !== -1 ) {
+		                $(nRow).addClass('row_selected');
+		            }
+		        }
+		]]>
+    </c:set>
+    
+	<div id="cragList">
+	  <page:list id="pl_pg_tm470_boltfund_domain_Crag" items="${crags}" z="user-managed">
+        <util:datatables id="l_pg_tm470_boltfund_domain_Crag" path="/crags" fnRowCallback="${fnRowCallback}" typeIdFieldName="id" update="false" create="false" z="user-managed">
+            <util:datacolumn filter="true" id="c_pg_tm470_boltfund_domain_Crag_name" property="name" sort="true"/>
+            <util:datacolumn filter="true" id="c_pg_tm470_boltfund_domain_Crag_rockType" property="rockType" sort="true"/>
+            <util:datacolumn filter="true" id="c_pg_tm470_boltfund_domain_Crag_height" property="height"/>
+            <table:column id="c_pg_tm470_boltfund_domain_Crag_description" property="description" render="false" z="user-managed"/>
+            <table:column id="c_pg_tm470_boltfund_domain_Crag_notes" property="notes" render="false" z="user-managed"/>
+            <table:column id="c_pg_tm470_boltfund_domain_Crag_access" property="access" render="false" z="user-managed"/>
+        </util:datatables>
+      </page:list>
+    </div>
+    
+    <page:list id="pl_pg_tm470_boltfund_domain_Crag" items="${crags}" render="false" z="user-managed"/>
+</div>

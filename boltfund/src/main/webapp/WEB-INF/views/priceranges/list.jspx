@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_PriceRange" items="${priceranges}" z="36JNG92jUgGDX4+Q+/NG6pOOboY=">
+        <table:table data="${priceranges}" id="l_pg_tm470_boltfund_domain_PriceRange" path="/priceranges" z="slVtlBTwRMtCDJeSVSioFTz9d+4=">
+            <table:column id="c_pg_tm470_boltfund_domain_PriceRange_name" property="name" z="pPS4aS8w7gkz3hcjcu19X4Pd1ww="/>
+            <table:column id="c_pg_tm470_boltfund_domain_PriceRange_priceRange" property="priceRange" z="EhkoypCjNc5d/i2B63+5N1EmRbo="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_WebUser" object="${webuser}" path="/webusers" z="5RBb6qa6E9Wzpysgb1nOfLrrHtQ=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_WebUser_name" object="${webuser}" z="c1LK287enHzlDvLwABwADCGX/kE="/>
+        <field:display field="surname" id="s_pg_tm470_boltfund_domain_WebUser_surname" object="${webuser}" z="TDyTB9ua1M6V4xQCjtVOFn7kvxM="/>
+        <field:display field="email" id="s_pg_tm470_boltfund_domain_WebUser_email" object="${webuser}" z="0Xwufjx/EKTgTghwodk0AOlIIys="/>
+        <field:display field="phone" id="s_pg_tm470_boltfund_domain_WebUser_phone" object="${webuser}" z="VzyhyiR8NNSZ+0u3TULPypryg6w="/>
+        <field:display field="mobile" id="s_pg_tm470_boltfund_domain_WebUser_mobile" object="${webuser}" z="P6/LDoaBJvY71OA7mRY+/z2XUlk="/>
+        <field:display field="fax" id="s_pg_tm470_boltfund_domain_WebUser_fax" object="${webuser}" z="B0vtlVZbrcx7qLhW2C6b5zCOBVk="/>
+        <field:display field="username" id="s_pg_tm470_boltfund_domain_WebUser_username" object="${webuser}" z="QE59kwmP0gNKWK/euNvM0MdG4wI="/>
+        <field:display field="password" id="s_pg_tm470_boltfund_domain_WebUser_password" object="${webuser}" z="k9TYOMbtG5AMXhccDh2+N6Eyvhc="/>
+        <field:display field="roles" id="s_pg_tm470_boltfund_domain_WebUser_roles" object="${webuser}" z="QkbyM4b9rfFxy05zwgyi+FIFG/E="/>
+    </page:show>
+</div>

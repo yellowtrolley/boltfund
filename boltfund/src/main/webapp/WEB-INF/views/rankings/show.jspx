@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Rating" object="${rating}" path="/rankings" z="3V7TEYL5hMVnfD9APaWDodVwCqE=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_Rating_name" object="${rating}" z="LSZGQgTfTmOW6hEfg7R5q1MOJFg="/>
+        <field:display field="score" id="s_pg_tm470_boltfund_domain_Rating_score" object="${rating}" z="C/zh5d622d9ESAZLa0kr9xf51tY="/>
+        <field:display field="description" id="s_pg_tm470_boltfund_domain_Rating_description" object="${rating}" z="wLB9fS06I4qj5BbPPAZ4PXqTV1M="/>
+    </page:show>
+</div>

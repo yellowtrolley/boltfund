@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Sleep" object="${sleep}" path="/sleeps" z="Q+atnIrN5Cj0LShpMl4vodymAYs=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_Sleep_name" object="${sleep}" z="vGIYyZbTGZ4BkiD4gCMNxi2YwaA="/>
+        <field:display field="contact" id="s_pg_tm470_boltfund_domain_Sleep_contact" object="${sleep}" z="S1Mx8iknXzOWe5ZvbLtbDJCreTM="/>
+        <field:display field="email" id="s_pg_tm470_boltfund_domain_Sleep_email" object="${sleep}" z="ZG89civYTqoSOI7sZX4CPxTg2cY="/>
+        <field:display field="phone" id="s_pg_tm470_boltfund_domain_Sleep_phone" object="${sleep}" z="mJFDSi4/u6y0IW2LTGfOp7N4O2k="/>
+        <field:display field="mobile" id="s_pg_tm470_boltfund_domain_Sleep_mobile" object="${sleep}" z="NQgiYe6nko4BzeGV9CA8i+pJ91Y="/>
+        <field:display field="fax" id="s_pg_tm470_boltfund_domain_Sleep_fax" object="${sleep}" z="4qwF7PpZMbxH6n2T9bFtJ0ZxCD4="/>
+        <field:display field="access" id="s_pg_tm470_boltfund_domain_Sleep_access" object="${sleep}" z="iG4LPmrCgIwDPl+W1D5/XE7i2FM="/>
+        <field:display field="note" id="s_pg_tm470_boltfund_domain_Sleep_note" object="${sleep}" z="S43ploySJicbz4CijQDspGjiIeI="/>
+        <field:display field="link" id="s_pg_tm470_boltfund_domain_Sleep_link" object="${sleep}" z="CULM+hlXYnigE+Ui7ph7/a7+lQo="/>
+        <field:display field="priceRange" id="s_pg_tm470_boltfund_domain_Sleep_priceRange" object="${sleep}" z="laanxDMjEjXhZTrvI6M6TfprgO4="/>
+        <field:display field="location" id="s_pg_tm470_boltfund_domain_Sleep_location" object="${sleep}" z="W/z7uDlIGsRVUqNzcrBtG7UXvyQ="/>
+        <field:display field="rating" id="s_pg_tm470_boltfund_domain_Sleep_rating" object="${sleep}" z="rnIR6NtbGZylM4daO02EtxAwp4w="/>
+    </page:show>
+</div>

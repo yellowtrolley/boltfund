@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_PrintedGuide" object="${printedguide}" path="/printedguides" z="01CpkZD9grqZzzoD6z/1kdmz6Vo=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_PrintedGuide_name" object="${printedguide}" z="OHHqJ8Lh8OMfvVR5zZbVZ1RLpnc="/>
+        <field:display field="description" id="s_pg_tm470_boltfund_domain_PrintedGuide_description" object="${printedguide}" z="7lGYAMVl1gRpWlYzhvnDCx4U+Nw="/>
+        <field:display field="link" id="s_pg_tm470_boltfund_domain_PrintedGuide_link" object="${printedguide}" z="dnlxd/8DqyHlJV7A9ynzgy7UIyw="/>
+    </page:show>
+</div>

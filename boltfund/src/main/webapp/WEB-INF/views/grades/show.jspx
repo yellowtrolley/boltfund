@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Grade" object="${grade}" path="/grades" z="YHXnN5F5vgL5ViMtGg2aaASJcpQ=">
+        <field:display field="yds" id="s_pg_tm470_boltfund_domain_Grade_yds" object="${grade}" z="1HmO7+z1EWODE+8BbW7mz9Q73Vk="/>
+        <field:display field="britishTec" id="s_pg_tm470_boltfund_domain_Grade_britishTec" object="${grade}" z="/O8p9ICAedrUW6cUS/+HXCr83tQ="/>
+        <field:display field="britishAdj" id="s_pg_tm470_boltfund_domain_Grade_britishAdj" object="${grade}" z="b9+mZK7QmhEqz3KKR6qDCSZhKMY="/>
+        <field:display field="french" id="s_pg_tm470_boltfund_domain_Grade_french" object="${grade}" z="hGC9CBt6xVxRb0A9KpyDDcRbHwg="/>
+        <field:display field="uiaa" id="s_pg_tm470_boltfund_domain_Grade_uiaa" object="${grade}" z="LGkYv+zsKFQLD1FrfJgxSwYxD0I="/>
+        <field:display field="saxon" id="s_pg_tm470_boltfund_domain_Grade_saxon" object="${grade}" z="l2GGmGJ9dpU57uyRxWX+M4fvtnc="/>
+        <field:display field="ewbank" id="s_pg_tm470_boltfund_domain_Grade_ewbank" object="${grade}" z="MPX3s4TRa8FfqMr/LcTVIO5XSik="/>
+        <field:display field="finnish" id="s_pg_tm470_boltfund_domain_Grade_finnish" object="${grade}" z="6GnyUUyoqH7GCl8yP7u8ABXBK+U="/>
+        <field:display field="norwegian" id="s_pg_tm470_boltfund_domain_Grade_norwegian" object="${grade}" z="xTUcvy1JMWg1JSbrnvm+WhyLJ/o="/>
+        <field:display field="brazilian" id="s_pg_tm470_boltfund_domain_Grade_brazilian" object="${grade}" z="bO59ZcAIAltNFYz5QmPICcsEqUU="/>
+    </page:show>
+</div>

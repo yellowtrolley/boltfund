@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Bolter" object="${bolter}" path="/bolters" z="rCdMRPgQLFfcGSTOS6ZZQrP1ITo=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_Bolter_name" object="${bolter}" z="MC5tv7Twap4c7CVzh7lUMStnst4="/>
+        <field:display field="surname" id="s_pg_tm470_boltfund_domain_Bolter_surname" object="${bolter}" z="byr/orqNZeWhs6k0Z2XB8QW+vUo="/>
+        <field:display field="email" id="s_pg_tm470_boltfund_domain_Bolter_email" object="${bolter}" z="DLm0fjPbMUVozr0kRz08UQsCNeg="/>
+        <field:display field="phone" id="s_pg_tm470_boltfund_domain_Bolter_phone" object="${bolter}" z="cL+4wBaiBRH1nktjdhLnV7IRNT0="/>
+        <field:display field="mobile" id="s_pg_tm470_boltfund_domain_Bolter_mobile" object="${bolter}" z="nvvMndfacg3JZQsIxn1R3c5Zwpg="/>
+        <field:display field="fax" id="s_pg_tm470_boltfund_domain_Bolter_fax" object="${bolter}" z="Qm/YnArSgHu5mZA7i2YOixUheEw="/>
+        <field:display field="username" id="s_pg_tm470_boltfund_domain_Bolter_username" object="${bolter}" z="RUY0Bsa4qtWN5cpM7+qumU+Iduw="/>
+        <field:display field="password" id="s_pg_tm470_boltfund_domain_Bolter_password" object="${bolter}" z="H0TZe2jtBaPzYw5QC+Id7c8j/bc="/>
+        <field:display field="roles" id="s_pg_tm470_boltfund_domain_Bolter_roles" object="${bolter}" z="pvNiHCw/hkeVPqUW/O1JnspCi0Y="/>
+        <field:display field="routesBolted" id="s_pg_tm470_boltfund_domain_Bolter_routesBolted" object="${bolter}" z="lpQ8cfC4v28nz/kL1tTFUgfR3UE="/>
+        <field:display field="routesRebolted" id="s_pg_tm470_boltfund_domain_Bolter_routesRebolted" object="${bolter}" z="gUhNY2MXzqhse6YOMTpAxEDvHKI="/>
+    </page:show>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_pg_tm470_boltfund_domain_PrintedGuide" modelAttribute="printedGuide" path="/printedguides" render="${empty dependencies}" z="w8T5IV2aYdgg3xQfDjPkxgzwbaE=">
+        <field:input field="name" id="c_pg_tm470_boltfund_domain_PrintedGuide_name" max="25" z="IfSk+DciDViluYSZyNvtoXz44AI="/>
+        <field:textarea field="description" id="c_pg_tm470_boltfund_domain_PrintedGuide_description" z="VgdKwL8aRIykFzpfWidIO1T5SGE="/>
+        <field:textarea field="link" id="c_pg_tm470_boltfund_domain_PrintedGuide_link" z="rWTEHfqypLW3Zp+MHsMnPQNV4js="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_pg_tm470_boltfund_domain_PrintedGuide" render="${not empty dependencies}" z="g7qV38j1zK2Cd5N1fFXkkbQkBvo="/>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_pg_tm470_boltfund_domain_Style" modelAttribute="style" path="/styles" render="${empty dependencies}" z="Zu3X3RIrPkCqgK0EGnMxogskPL8=">
+        <field:input field="name" id="c_pg_tm470_boltfund_domain_Style_name" max="20" z="iKrgNFFet6AwOMDShnhZQKyJoaE="/>
+        <field:textarea field="description" id="c_pg_tm470_boltfund_domain_Style_description" z="1SZJsRHKBkMs0bQVwf5C1tWgJ4E="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_pg_tm470_boltfund_domain_Style" render="${not empty dependencies}" z="XcF82aTwvhNoGjH+HQKUU28aAhs="/>
+</div>

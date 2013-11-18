@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_Grade" items="${grades}" z="EG74z//ckSdXozvqU1vBDG4HQRg=">
+        <table:table data="${grades}" id="l_pg_tm470_boltfund_domain_Grade" path="/grades" z="RL9NqmjFHMkkkco6XwzYaqeiD34=">
+            <table:column id="c_pg_tm470_boltfund_domain_Grade_yds" property="yds" z="qERm/Esrt/r9H7b2mHztEBzo5YA="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Grade_britishTec" property="britishTec" z="12MUV8n9UfOFDllBBjfhO+PBMsw="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Grade_britishAdj" property="britishAdj" z="9irKmxLZsXjpL26aIZ6vXYOm23Q="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Grade_french" property="french" z="jwq4+U1eMUhapDaHhc2E9owe51Q="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Grade_uiaa" property="uiaa" z="K7Wd7MEKdRePC8+zZOa8UpLOAw0="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Grade_saxon" property="saxon" z="7BjehzLuKtdrIMYS+tWDhJvewlg="/>
+        </table:table>
+    </page:list>
+</div>

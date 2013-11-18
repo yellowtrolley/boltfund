@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pg_tm470_boltfund_domain_Crag" modelAttribute="crag" path="/crags" versionField="Version" z="Psntl2DZEHZzR02x9Uu3JBKsytw=">
+        <field:input field="name" id="c_pg_tm470_boltfund_domain_Crag_name" max="20" z="PQNuJymCO9hLpBF50upvd3ZOiv4="/>
+        <field:textarea field="description" id="c_pg_tm470_boltfund_domain_Crag_description" z="rn7ijUOFVq6ViOVpe67PW2De4Bs="/>
+        <field:textarea field="notes" id="c_pg_tm470_boltfund_domain_Crag_notes" z="C50VMmSx2Hi6LeqeW+YZ8jL2o50="/>
+        <field:textarea field="access" id="c_pg_tm470_boltfund_domain_Crag_access" z="3C2iJauhZhNB1Tju9ebmXUs1nIU="/>
+        <field:input field="rockType" id="c_pg_tm470_boltfund_domain_Crag_rockType" max="20" z="whEvp7hE8bvDsjlNhdLfkM3IdBw="/>
+        <field:input field="height" id="c_pg_tm470_boltfund_domain_Crag_height" validationMessageCode="field_invalid_integer" z="rPi+5n79Hmz4z+yKbrQD/r0X0ik="/>
+        <field:input field="season" id="c_pg_tm470_boltfund_domain_Crag_season" z="KCZZiq3EE72x6rvSQ4BSyOMLW/8="/>
+        <field:select field="guides" id="c_pg_tm470_boltfund_domain_Crag_guides" itemValue="id" items="${printedguides}" multiple="true" path="/printedguides" z="gT1b7ShJLJtMDybAcROFNFVC7Bc="/>
+        <field:select field="infos" id="c_pg_tm470_boltfund_domain_Crag_infos" itemValue="id" items="${infoses}" multiple="true" path="/infoses" z="LS3xXH4DEETNA/S1OK4j4EZYPkw="/>
+        <field:simple field="sectors" id="c_pg_tm470_boltfund_domain_Crag_sectors" messageCode="entity_reference_not_managed" messageCodeAttribute="Sector" render="false" z="user-managed"/>
+        <field:select field="location" id="c_pg_tm470_boltfund_domain_Crag_location" itemValue="id" items="${locations}" path="/locations" z="pG+vn/0heTO64gJCidKRWhC81vI="/>
+        <field:select field="rating" id="c_pg_tm470_boltfund_domain_Crag_rating" itemValue="id" items="${ratings}" path="/rankings" z="TyvBMMH3GQodFojsv8NO8eSy+Ns="/>
+        <field:select field="editors" id="c_pg_tm470_boltfund_domain_Crag_editors" itemValue="id" items="${bolters}" multiple="true" path="/bolters" z="MtmJlSNx6ttX4d0IXj00Xz+/9Zc="/>
+    </form:update>
+    <c:set var="fnRowDetails"><![CDATA[ 
+		/*
+			var oData = oTable.fnGetData( nTr );
+		  	var sOut = '<div class="innerDetails">'+
+			      '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+			      '<thead><tr><th>name</th><th>grade</th><th>length</th><th>bolts</th><th>ranking</th><th>boltedBy</th><th>note</th></tr></thead>'+
+			      '<tbody>';
+			sectorId = oData.id;
+			var routes = oData.routes;
+			jQuery.each(routes, function(i, r) {
+				sOut = sOut+'<tr><td>'+r.name+'</td><td>'+r.description+'</td></tr>';
+                   return;
+       		});
+			sOut = sOut+'</tbody></table>';
+			sOut = sOut+'<button class="newRoute">New Route</button>';
+			sOut = sOut+'</div>';
+		  	return sOut;
+		  	
+		  	*/
+		]]></c:set>
+    <script language="JavaScript" type="text/javascript">
+	var sectorId;
+		var anOpen = [];
+		$('.newRoute').live('click',function() {
+			$('.createRouteForm').position({my:"left bottom", at:"left bottom", of:$(this)});
+			$('.createRouteForm').show('normal');
+    	});
+    </script>
+    <div id="sectorList">
+        <page:list id="pl_pg_tm470_boltfund_domain_Sector" items="${crag.sectors}" z="user-managed">
+            <util:datatables fnRowDetails="${fnRowDetails}" id="l_pg_tm470_boltfund_domain_Sector" path="/crags/${crag.id}/sectors" pathCreate="/crags/${crag.id}/sectors" z="user-managed">
+                <util:datacolumn id="c_pg_tm470_boltfund_domain_Sector_name" property="name" z="user-managed"/>
+                <util:datacolumn id="c_pg_tm470_boltfund_domain_Sector_description" property="description" z="user-managed"/>
+            </util:datatables>
+        </page:list>
+    </div>
+    <c:if test="${not empty showSectorForm and showSectorForm}">
+        <div id="createSectorForm">
+            <form:create id="fc_pg_tm470_boltfund_domain_Sector" modelAttribute="sector" path="/sectors" render="${empty dependencies}" z="user-managed">
+                <field:input field="name" id="c_pg_tm470_boltfund_domain_Sector_name" max="20" z="user-managed"/>
+                <field:textarea field="description" id="c_pg_tm470_boltfund_domain_Sector_description" z="user-managed"/>
+                <field:textarea field="notes" id="c_pg_tm470_boltfund_domain_Sector_notes" z="user-managed"/>
+                <field:textarea field="access" id="c_pg_tm470_boltfund_domain_Sector_access" z="user-managed"/>
+                <field:select field="ranking" id="c_pg_tm470_boltfund_domain_Sector_ranking" itemValue="id" items="${rankings}" path="/rankings" z="user-managed"/>
+            </form:create>
+            <form:dependency dependencies="${dependencies}" id="d_pg_tm470_boltfund_domain_Sector" render="${not empty dependencies}" z="user-managed"/>
+        </div>
+    </c:if>
+    <div class="createRouteForm">
+        <form:create id="fc_pg_tm470_boltfund_domain_Route" modelAttribute="route" path="/routes" render="${empty dependencies}" z="user-managed">
+            <field:input field="name" id="c_pg_tm470_boltfund_domain_Route_name" max="25" z="user-managed"/>
+            <field:textarea field="description" id="c_pg_tm470_boltfund_domain_Route_description" z="user-managed"/>
+            <field:textarea field="note" id="c_pg_tm470_boltfund_domain_Route_note" z="user-managed"/>
+            <field:input field="length" id="c_pg_tm470_boltfund_domain_Route_length" validationMessageCode="field_invalid_integer" z="user-managed"/>
+            <field:input field="bolts" id="c_pg_tm470_boltfund_domain_Route_bolts" validationMessageCode="field_invalid_integer" z="user-managed"/>
+            <field:datetime dateTimePattern="${route_daterebolted_date_format}" field="dateCreated" id="c_pg_tm470_boltfund_domain_Route_dateCreated" past="true" required="true" z="user-managed"/>
+            <field:datetime dateTimePattern="${route_datesubmitted_date_format}" field="dateSubmitted" id="c_pg_tm470_boltfund_domain_Route_dateSubmitted" render="false" required="true" z="user-managed"/>
+            <field:datetime dateTimePattern="${route_daterebolted_date_format}" field="dateRebolted" id="c_pg_tm470_boltfund_domain_Route_dateRebolted" past="true" z="user-managed"/>
+            <field:select field="ranking" id="c_pg_tm470_boltfund_domain_Route_ranking" itemValue="id" items="${rankings}" path="/rankings" z="user-managed"/>
+            <field:select field="style" id="c_pg_tm470_boltfund_domain_Route_style" itemValue="id" items="${styles}" multiple="true" path="/styles" z="user-managed"/>
+            <field:select field="grade" id="c_pg_tm470_boltfund_domain_Route_grade" itemValue="id" items="${grades}" multiple="true" path="/grades" z="user-managed"/>
+            <field:select field="sector" id="c_pg_tm470_boltfund_domain_Route_sector" itemValue="id" items="${sectors}" path="/sectors" z="user-managed"/>
+            <field:select field="boltedBy" id="c_pg_tm470_boltfund_domain_Route_boltedBy" itemValue="id" items="${bolters}" multiple="true" path="/bolters" z="user-managed"/>
+            <field:select field="reboltedBy" id="c_pg_tm470_boltfund_domain_Route_reboltedBy" itemValue="id" items="${bolters}" multiple="true" path="/bolters" z="user-managed"/>
+        </form:create>
+        <form:dependency dependencies="${dependencies}" id="d_pg_tm470_boltfund_domain_Route" render="${not empty dependencies}" z="user-managed"/>
+    </div>
+</div>

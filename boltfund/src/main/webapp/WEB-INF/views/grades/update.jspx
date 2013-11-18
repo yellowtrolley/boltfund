@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pg_tm470_boltfund_domain_Grade" modelAttribute="grade" path="/grades" versionField="Version" z="cOgxsJnJhq6x2HSG2hMk9DFCJaI=">
+        <field:input field="yds" id="c_pg_tm470_boltfund_domain_Grade_yds" max="5" z="k8GAWCndZmfqATc/WVCXS8XPYe0="/>
+        <field:input field="britishTec" id="c_pg_tm470_boltfund_domain_Grade_britishTec" max="5" z="VCcVwUHMewkSULQ7XHBCjtQgkVs="/>
+        <field:input field="britishAdj" id="c_pg_tm470_boltfund_domain_Grade_britishAdj" max="5" z="xvRcHyqwXNsdPt6QQBqOKGZB9Qs="/>
+        <field:input field="french" id="c_pg_tm470_boltfund_domain_Grade_french" max="5" z="bzVC0gMTCf0XOy8AeoaQCVznHOI="/>
+        <field:input field="uiaa" id="c_pg_tm470_boltfund_domain_Grade_uiaa" max="5" z="6mxc391IUmlpkOxcU8SMsYd0s/c="/>
+        <field:input field="saxon" id="c_pg_tm470_boltfund_domain_Grade_saxon" max="5" z="lWQIEovtGhqunfJpSxo3QHxbqqM="/>
+        <field:input field="ewbank" id="c_pg_tm470_boltfund_domain_Grade_ewbank" max="5" z="E4IEo5GwhtrU+HL4OOUTVbUZgq8="/>
+        <field:input field="finnish" id="c_pg_tm470_boltfund_domain_Grade_finnish" max="5" z="54icajr3zxpowaOIpBUmDDztGhw="/>
+        <field:input field="norwegian" id="c_pg_tm470_boltfund_domain_Grade_norwegian" max="5" z="X9rDW7NI7tSoJeyYqHWgLtcxV08="/>
+        <field:input field="brazilian" id="c_pg_tm470_boltfund_domain_Grade_brazilian" max="5" z="smNvURVynBUwGi2COCPAKg3MReQ="/>
+    </form:update>
+</div>

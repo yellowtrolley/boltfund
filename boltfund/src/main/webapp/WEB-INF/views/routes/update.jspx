@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_pg_tm470_boltfund_domain_Route" modelAttribute="route" path="/routes" versionField="Version" z="I/wPg2i8QPgQyIvej1ZArPAzGOQ=">
+        <field:input field="name" id="c_pg_tm470_boltfund_domain_Route_name" max="25" z="GLncHqZeCtpxjiO5C3eP2nN8KX0="/>
+        <field:textarea field="description" id="c_pg_tm470_boltfund_domain_Route_description" z="nIbTjXi5vlXRqAidH3eJWAdauQ0="/>
+        <field:textarea field="note" id="c_pg_tm470_boltfund_domain_Route_note" z="4GloGiU0SjWmJa3hM/pB5PfXhwo="/>
+        <field:input field="length" id="c_pg_tm470_boltfund_domain_Route_length" validationMessageCode="field_invalid_integer" z="SRYytP6YJlY8V1c9dyiTg1yyopA="/>
+        <field:input field="bolts" id="c_pg_tm470_boltfund_domain_Route_bolts" validationMessageCode="field_invalid_integer" z="Rl8IF37Ru9qO4zah4w/QYZ7Yq1k="/>
+        <field:datetime dateTimePattern="${route_datecreated_date_format}" field="dateCreated" id="c_pg_tm470_boltfund_domain_Route_dateCreated" past="true" required="true" z="BcB5vAHAOSowDUNRhmxRFsALUTk="/>
+        <field:datetime dateTimePattern="${route_datesubmitted_date_format}" field="dateSubmitted" id="c_pg_tm470_boltfund_domain_Route_dateSubmitted" required="true" z="eHDDuNdJgVd1b18v+QAHJAHk+WI="/>
+        <field:datetime dateTimePattern="${route_daterebolted_date_format}" field="dateRebolted" id="c_pg_tm470_boltfund_domain_Route_dateRebolted" past="true" z="buBCqDBuROJYw81pfVwpEE/w2W4="/>
+        <field:simple field="style" id="c_pg_tm470_boltfund_domain_Route_style" messageCode="entity_reference_not_managed" messageCodeAttribute="Style" z="YvU4gc313YZwjF3DFVI8U1tjiC4="/>
+        <field:simple field="grade" id="c_pg_tm470_boltfund_domain_Route_grade" messageCode="entity_reference_not_managed" messageCodeAttribute="Grade" z="/nXlsoWWOw0r8hrYoZVsPNB+pkM="/>
+        <field:select field="sector" id="c_pg_tm470_boltfund_domain_Route_sector" itemValue="id" items="${sectors}" path="/sectors" z="JasQWzNdw1LzXkg0pngMLWewsw4="/>
+        <field:select field="boltedBy" id="c_pg_tm470_boltfund_domain_Route_boltedBy" itemValue="id" items="${bolters}" multiple="true" path="/bolters" z="XXFOqwJGWtqBNpJx0eOEdGJvDsM="/>
+        <field:select field="reboltedBy" id="c_pg_tm470_boltfund_domain_Route_reboltedBy" itemValue="id" items="${bolters}" multiple="true" path="/bolters" z="u2P8KlwP1wVbkKSoRBcvYgKfwtk="/>
+        <field:select field="rating" id="c_pg_tm470_boltfund_domain_Route_rating" itemValue="id" items="${ratings}" path="/rankings" z="rH00ciF/t/WrDhcFooa7zZPx9Rk="/>
+    </form:update>
+</div>

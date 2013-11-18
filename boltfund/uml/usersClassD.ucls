@@ -1,0 +1,61 @@
+<class-diagram version="1.0.10" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.AbstractUser" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/AbstractUser.java" binary="false">    
+    <position height="203" width="122" x="196" y="36"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.Bolter" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/Bolter.java" binary="false">    
+    <position height="-1" width="-1" x="443" y="258"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.WebUser" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/WebUser.java" binary="false">    
+    <position height="50" width="77" x="33" y="218"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="4" corner="BOTTOM_RIGHT" language="java" name="pg.tm470.boltfund.domain.AppRole" project="boltfund" 
+    file="/boltfund/src/main/java/pg/tm470/boltfund/domain/AppRole.java" binary="false">    
+    <position height="101" width="118" x="412" y="49"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+      visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </enumeration>  
+  <association id="5">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="6" name="roles"/>      
+      <multiplicity id="7" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="9">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+    visibility="false">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

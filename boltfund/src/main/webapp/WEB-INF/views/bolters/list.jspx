@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_Bolter" items="${bolters}" z="3bX7IX1XhC3cb+j18vBQoCQ6law=">
+        <table:table data="${bolters}" id="l_pg_tm470_boltfund_domain_Bolter" path="/bolters" z="RYlOMKBU+Ox2eTm/GJJ+hH/WTMk=">
+            <table:column id="c_pg_tm470_boltfund_domain_Bolter_name" property="name" z="ZxqhxoDXYULuqtuDJDo3tEpYa8U="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Bolter_surname" property="surname" z="kKixS8RP2GSAO4jMhBVuCc5NDyw="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Bolter_email" property="email" z="tTvoK7trm2gWpGNmKKWjddq/9gs="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Bolter_phone" property="phone" z="cglO8RkcXZDqWlca0Ik/aHxmq/U="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Bolter_mobile" property="mobile" z="Om/5WSRmi/emhvIYiEYs/bX/TCw="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Bolter_fax" property="fax" z="QVY6TXB0hHivkQ+bf0qgr6m9eFw="/>
+        </table:table>
+    </page:list>
+</div>

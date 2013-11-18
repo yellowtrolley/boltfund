@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_pg_tm470_boltfund_domain_Bolter" modelAttribute="bolter" path="/bolters" render="${empty dependencies}" z="BEjA/BLcodRJno5cGeqmx/ePXtA=">
+        <field:input field="name" id="c_pg_tm470_boltfund_domain_Bolter_name" max="30" z="7NoIv6FQeiriqSZNvxIV4rSFagY="/>
+        <field:input field="surname" id="c_pg_tm470_boltfund_domain_Bolter_surname" max="30" z="+8aH9xi69CGRCjDjs+wzQXj0wzI="/>
+        <field:textarea field="email" id="c_pg_tm470_boltfund_domain_Bolter_email" validationMessageCode="field_invalid_email" z="CqjZsalNPYGr5NNZdCrdcpSfj9Y="/>
+        <field:input field="phone" id="c_pg_tm470_boltfund_domain_Bolter_phone" max="25" z="EAWnD8+j+p31Q18ScQIl0wxfoOo="/>
+        <field:input field="mobile" id="c_pg_tm470_boltfund_domain_Bolter_mobile" max="25" z="RVujJ7ykx9SY8Fm0bg9v4JKpq1I="/>
+        <field:input field="fax" id="c_pg_tm470_boltfund_domain_Bolter_fax" max="25" z="25cMhhXbyBMFEWjQOS5+Z8MKfH0="/>
+        <field:input field="username" id="c_pg_tm470_boltfund_domain_Bolter_username" max="30" required="true" z="jrmcNqgjgkgPEV7LOCeOaECY/xY="/>
+        <field:input field="password" id="c_pg_tm470_boltfund_domain_Bolter_password" max="30" required="true" z="PTwiiOvRk00zeM0ZU5s7RV5kWOk="/>
+        <field:select field="roles" id="c_pg_tm470_boltfund_domain_Bolter_roles" items="${approles}" path="approles" z="UAkRWp4cuXEzZObGHvyOmxIYinA="/>
+        <field:select field="routesBolted" id="c_pg_tm470_boltfund_domain_Bolter_routesBolted" itemValue="id" items="${routes}" multiple="true" path="/routes" z="4h2k1HocF9iv8D2e9Ms9wxTOIp8="/>
+        <field:select field="routesRebolted" id="c_pg_tm470_boltfund_domain_Bolter_routesRebolted" itemValue="id" items="${routes}" multiple="true" path="/routes" z="8xaGHXxIVmnljPxR+qAL9+I//RI="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_pg_tm470_boltfund_domain_Bolter" render="${not empty dependencies}" z="T7No8BQ+oEtBrFyGq0GoG3GV9wE="/>
+</div>

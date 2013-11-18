@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_Eat" items="${eats}" z="A6OrlHQGNU8EsJ2H0nblk/ReQGY=">
+        <table:table data="${eats}" id="l_pg_tm470_boltfund_domain_Eat" path="/eats" z="6STH/yNvDHNW6okZXEj+702mje8=">
+            <table:column id="c_pg_tm470_boltfund_domain_Eat_name" property="name" z="3vk9MspFRga7eJfxzC1VlsleaMw="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Eat_contact" property="contact" z="SAlERlzj1BEV32/aUhbVHbGZWWA="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Eat_email" property="email" z="n+m6WhN7lfdEU+vWCoeeBNrMm98="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Eat_phone" property="phone" z="7Ic9SGY8a6ckDnHfHu4SmX4jYLg="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Eat_mobile" property="mobile" z="L4xRiBL7iQIHjtUumXtckl2mGnk="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Eat_fax" property="fax" z="g13Lde7vbscAT3S5K0KhLET54fQ="/>
+        </table:table>
+    </page:list>
+</div>

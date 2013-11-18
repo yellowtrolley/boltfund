@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_Sleep" items="${sleeps}" z="DQ2aW9CafjaQbNFUvLmL7gpIXKQ=">
+        <table:table data="${sleeps}" id="l_pg_tm470_boltfund_domain_Sleep" path="/sleeps" z="1eLHAU7zh7bVzUuaZCQ4u1lPOpM=">
+            <table:column id="c_pg_tm470_boltfund_domain_Sleep_name" property="name" z="5Xe7i1A/iplneIC6SPV+6vmCA3k="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Sleep_contact" property="contact" z="dcH409TLawkE9q0hzpOoZLcuBzY="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Sleep_email" property="email" z="oVE1UsT9RIbQl+fH8DRUVEzmR5k="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Sleep_phone" property="phone" z="B0SUdJP2WUC1luxUxSAadit9l2E="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Sleep_mobile" property="mobile" z="EghzQXzaKXWEew96I3dOvkGDfZE="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Sleep_fax" property="fax" z="gGNsVFtZnI+KxCHhscPh9TpUmAc="/>
+        </table:table>
+    </page:list>
+</div>

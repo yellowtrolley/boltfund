@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Shop" object="${shop}" path="/shops" z="5pUanIWQhL5D3isBWJJ2/cNYUE4=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_Shop_name" object="${shop}" z="NMz3fsywsXi8nEeRC/QNU89t6uE="/>
+        <field:display field="contact" id="s_pg_tm470_boltfund_domain_Shop_contact" object="${shop}" z="l4SsQEoB4LS7KkqiDgq+7xw9Zio="/>
+        <field:display field="email" id="s_pg_tm470_boltfund_domain_Shop_email" object="${shop}" z="uhD0jwRj0lW4RVy9P+7YdwblhIY="/>
+        <field:display field="phone" id="s_pg_tm470_boltfund_domain_Shop_phone" object="${shop}" z="FS18QCSbB2g0ytTT1WPryO005Dw="/>
+        <field:display field="mobile" id="s_pg_tm470_boltfund_domain_Shop_mobile" object="${shop}" z="cvZoeeeRrLcy5PERizSEmzg0sg4="/>
+        <field:display field="fax" id="s_pg_tm470_boltfund_domain_Shop_fax" object="${shop}" z="4iYJS2tauy/fD2izr5UDOQATwG4="/>
+        <field:display field="access" id="s_pg_tm470_boltfund_domain_Shop_access" object="${shop}" z="IRMTt3E33Z7Z4WtNR9C22TDywlc="/>
+        <field:display field="note" id="s_pg_tm470_boltfund_domain_Shop_note" object="${shop}" z="e1vLRfIN1jAHTJqE1K87EPSdJwc="/>
+        <field:display field="link" id="s_pg_tm470_boltfund_domain_Shop_link" object="${shop}" z="KfIZNWj+/PtjLsfd1lc+vfz8Vd4="/>
+        <field:display field="location" id="s_pg_tm470_boltfund_domain_Shop_location" object="${shop}" z="r44jf0dEFH/0SU7iw/T7crJrISQ="/>
+    </page:show>
+</div>

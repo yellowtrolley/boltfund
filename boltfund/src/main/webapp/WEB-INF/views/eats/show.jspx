@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Eat" object="${eat}" path="/eats" z="XodVbV5p2M+liOkKYV7vhIIUqIM=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_Eat_name" object="${eat}" z="tK+tjqRr9mKbkd0arTFOAQ3g/nw="/>
+        <field:display field="contact" id="s_pg_tm470_boltfund_domain_Eat_contact" object="${eat}" z="I7EQH0a5itAB+qxaiwcacXBM9sg="/>
+        <field:display field="email" id="s_pg_tm470_boltfund_domain_Eat_email" object="${eat}" z="QfX+zkAokCs4CuwGHdvaG+dYOC8="/>
+        <field:display field="phone" id="s_pg_tm470_boltfund_domain_Eat_phone" object="${eat}" z="i8+gnVUvdSTRAWcxxt1vnnYKs2I="/>
+        <field:display field="mobile" id="s_pg_tm470_boltfund_domain_Eat_mobile" object="${eat}" z="qYK4LVBMqMIy9ZNLJz+8bAgqa8g="/>
+        <field:display field="fax" id="s_pg_tm470_boltfund_domain_Eat_fax" object="${eat}" z="Nw9PBmKX1IAA6Ds4re0S6yaqQqE="/>
+        <field:display field="access" id="s_pg_tm470_boltfund_domain_Eat_access" object="${eat}" z="Q2l0x8Am2ruPAx7eRzfeQAYuIhI="/>
+        <field:display field="note" id="s_pg_tm470_boltfund_domain_Eat_note" object="${eat}" z="aEnF8E5IL+3mEVzyza0DyUtG+QU="/>
+        <field:display field="link" id="s_pg_tm470_boltfund_domain_Eat_link" object="${eat}" z="ds+bk3fyCdyEqPEnTjfK7AInkN0="/>
+        <field:display field="priceRange" id="s_pg_tm470_boltfund_domain_Eat_priceRange" object="${eat}" z="MGEVM5Cil0+/EDTp49lgzdBpC0w="/>
+        <field:display field="location" id="s_pg_tm470_boltfund_domain_Eat_location" object="${eat}" z="E2T6JC23S37bdhUSuFne2Afs29w="/>
+        <field:display field="rating" id="s_pg_tm470_boltfund_domain_Eat_rating" object="${eat}" z="CK5ZH/fN2eT/e3JRzjlKSGk/qzg="/>
+    </page:show>
+</div>

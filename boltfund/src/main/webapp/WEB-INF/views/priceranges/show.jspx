@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_PriceRange" object="${pricerange}" path="/priceranges" z="waExb+176NPFUrNsQ6F4SFHMXpQ=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_PriceRange_name" object="${pricerange}" z="W2tn/3cwmWjKj5AnejzctH/iEvw="/>
+        <field:display field="priceRange" id="s_pg_tm470_boltfund_domain_PriceRange_priceRange" object="${pricerange}" z="QN/+u7qRg2Q51gud58188WUKRig="/>
+    </page:show>
+</div>

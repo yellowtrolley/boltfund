@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_pg_tm470_boltfund_domain_Shop" items="${shops}" z="/sV/3hn1DJn177d1irA93kCJFWU=">
+        <table:table data="${shops}" id="l_pg_tm470_boltfund_domain_Shop" path="/shops" z="Q1tF+MWVN21Oqo4Y6FDHwdByaiY=">
+            <table:column id="c_pg_tm470_boltfund_domain_Shop_name" property="name" z="rSrPEK+YuujiIhywYlLldrbL2Wg="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Shop_contact" property="contact" z="TK/jvRkt72H0ZljhQ+V9ds0kHl4="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Shop_email" property="email" z="On9BqDA8U2S/0moeW96kZGTI4cE="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Shop_phone" property="phone" z="waoXS/WQhguz4ECj0C8CHrSm65Q="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Shop_mobile" property="mobile" z="ypWiPNd3kTTtXHfpByHU/cbBnfE="/>
+            <table:column id="c_pg_tm470_boltfund_domain_Shop_fax" property="fax" z="e8s2RaFR/fZ+1L+oObq+JT1jDYA="/>
+        </table:table>
+    </page:list>
+</div>

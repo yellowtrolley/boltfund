@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Crag" object="${crag}" path="/crags" z="G4o+7gcpD/V0FMnqEc2ObkwOwwQ=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_Crag_name" object="${crag}" z="0gafMp3EqYkoMRTHNwr3YAH7xzo="/>
+        <field:display field="infos" id="s_pg_tm470_boltfund_domain_Crag_infos" object="${crag}" render="false" z="user-managed"/>
+        <field:display field="description" id="s_pg_tm470_boltfund_domain_Crag_description" object="${crag}" z="qWB+Obl1ztqOdIr0+n2iJtOu2hM="/>
+        <field:display field="notes" id="s_pg_tm470_boltfund_domain_Crag_notes" object="${crag}" z="FO6tRRmQXNPKo6Swj+avFKJtghY="/>
+        <field:display field="access" id="s_pg_tm470_boltfund_domain_Crag_access" object="${crag}" z="LJa7Y4AV9koW57aVsnusOEiWiUQ="/>
+        <field:display field="rockType" id="s_pg_tm470_boltfund_domain_Crag_rockType" object="${crag}" z="xFAjXIUFnTmn59iuIHDnB1BcIyk="/>
+        <field:display field="height" id="s_pg_tm470_boltfund_domain_Crag_height" object="${crag}" z="w1TLU5WlpMAKGw8TrfU77s2P+dU="/>
+        <field:display field="guides" id="s_pg_tm470_boltfund_domain_Crag_guides" object="${crag}" z="VhQKkRBstYzqcVCyCeSJ0Xht4zU="/>
+        <field:display field="location" id="s_pg_tm470_boltfund_domain_Crag_location" object="${crag}" z="DlyP/ynvmx+KmtnZdVYJVvfuVCo="/>
+        <field:display field="rating" id="s_pg_tm470_boltfund_domain_Crag_rating" object="${crag}" z="/eBYXIp91vqNLcdLSnQTelZNYnU="/>
+        <field:display field="editors" id="s_pg_tm470_boltfund_domain_Crag_editors" object="${crag}" z="Jp5puyu9p1DcqcCndZgah1xwzzk="/>
+        <field:display field="season" id="s_pg_tm470_boltfund_domain_Crag_season" object="${crag}" z="G0H4OqsXeQt+yLZtAQlh1PFb7Eo="/>
+    </page:show>
+    <spring:url value="/crags" var="show_form_url"/>
+    <c:set var="fnRowDetails"><![CDATA[ 
+			var oData = oTable.fnGetData( nTr );
+			var id = oData.id;
+			window.location = '${show_form_url}/'+id;
+			return false;
+		]]></c:set>
+    <div id="sectorList">
+        <util:datatables create="false" fnRowDetails="${fnRowDetails}" id="l_pg_tm470_boltfund_domain_Sector" path="/crags/${crag.id}/sectors" typeIdFieldName="id" update="false" z="user-managed">
+            <util:datacolumn id="c_pg_tm470_boltfund_domain_Sector_name" property="name" z="user-managed"/>
+            <util:datacolumn id="c_pg_tm470_boltfund_domain_Sector_description" property="description" z="user-managed"/>
+        </util:datatables>
+    </div>
+</div>

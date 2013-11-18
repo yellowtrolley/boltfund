@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_pg_tm470_boltfund_domain_Sector" object="${sector}" path="/sectors" z="oB/yBPij3qhTI4LnXUsD2SKyMVI=">
+        <field:display field="name" id="s_pg_tm470_boltfund_domain_Sector_name" object="${sector}" z="Ki/89uh7oknp1Jc2MmopI42JzDw="/>
+        <field:display field="description" id="s_pg_tm470_boltfund_domain_Sector_description" object="${sector}" z="yzkfq2fvvEorqctnVz309/OHA0A="/>
+        <field:display field="notes" id="s_pg_tm470_boltfund_domain_Sector_notes" object="${sector}" z="QFLx2I+/c7IlycbsAUGgEl8NZjA="/>
+        <field:display field="access" id="s_pg_tm470_boltfund_domain_Sector_access" object="${sector}" z="v2WpdlVeys/3YHgnJPY87KMLmGg="/>
+        <field:display field="crag" id="s_pg_tm470_boltfund_domain_Sector_crag" object="${sector}" z="0yu+xf2dXh5QQunK1/pip3BWs/Q="/>
+    </page:show>
+</div>
